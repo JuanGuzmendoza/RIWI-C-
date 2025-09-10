@@ -1,0 +1,36 @@
+# === Carpetas generadas automáticamente ===
+bin/
+obj/
+_site/
+api/
+docs/
+
+# === Archivos de usuario o temporales ===
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# === Archivos de compilación/dlls/caches ===
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+
+# === Archivos del sistema operativo ===
+.DS_Store
+Thumbs.db
+
+# === Archivos de DocFX generados automáticamente ===
+*.html
+*.json
+*.yml
+*.pdf
+
+# === Ignorar archivos de VSCode/JetBrains si no los usas globalmente ===
+.vscode/
+.idea/
+
+# === Otros posibles ===
+*.tmp
