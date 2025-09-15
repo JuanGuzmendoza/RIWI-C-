@@ -6,7 +6,7 @@ namespace CTalleres.Talleres
     /// <summary>
     /// Clase que contiene ejercicios básicos de C# para práctica de conceptos fundamentales.
     /// </summary>
-    public class T1
+    public static class T1
     {
         /// <summary>
         /// Ejercicio 1:
