@@ -47,3 +47,20 @@ T2.Ej10();
 // T2.Ej16();
 // T2.Ej17();
 // T2.Ej18();
+
+// ================================================================
+// 📝 EJERCICIOS T3
+// Clase: CTalleres.Talleres.T3
+// Descripción: Contiene ejercicios prácticos con ciclos y validaciones (Ej1 - Ej10)
+// ================================================================
+
+// T3.Ej1();
+// T3.Ej2();
+// T3.Ej3();
+// T3.Ej4();
+// T3.Ej5();
+// T3.Ej6();
+// T3.Ej7();
+// T3.Ej8();
+// T3.Ej9();
+// T3.Ej10();
