@@ -38,7 +38,7 @@
 // T2.Ej7();
 // T2.Ej8();
 // T2.Ej9();
-T2.Ej10();
+// T2.Ej10();
 // T2.Ej11();
 // T2.Ej12();
 // T2.Ej13();
@@ -64,3 +64,16 @@ T2.Ej10();
 // T3.Ej8();
 // T3.Ej9();
 // T3.Ej10();
+
+
+// ================================================================
+// 📝 EJERCICIOS LIQ
+// Clase: CTalleres.Talleres.Liq
+// Descripción: Contiene ejercicios de práctica con listas y LINQ
+// ================================================================
+
+// Liq.Ej1();
+Liq.Ej2();
+// Liq.Ej3();
+// Liq.Ej4();
+// Liq.Ej5();
