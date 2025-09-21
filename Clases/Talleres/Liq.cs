@@ -15,13 +15,27 @@ namespace CTalleres.Talleres
         /// los ejercicios de la clase Liq.
         /// </summary>
         public static List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-       
+
         /// <summary>
         /// Lista estática de nombres disponible para todos
         /// los ejercicios de la clase Liq.
         /// </summary>
-        public static List<string> names = new List<string> { "Alice", "Bob", "Charlie", "David","Eve" };
+        public static List<string> names = new List<string> { "Alice", "Bob", "Charlie", "David", "Eve" };
 
+        /// <summary>
+        /// Lista adicional de palabras para ejercicios combinados.
+        /// </summary>
+        public static List<string> words = new List<string> { "apple", "banana", "cherry", "date", "elderberry" };
+
+        /// <summary>
+        /// Lista adicional de números enteros para ejercicios combinados.
+        /// </summary>
+        public static List<int> data = new List<int> { 1, 2, 3, 4, 5, 6 };
+
+        /// <summary>
+        /// Lista adicional de números enteros para ejercicios combinados.
+        /// </summary>
+        public static List<int> moreData = new List<int> { 10, 12, 15, 11, 14, 13 };
 
 
         /// <summary>
@@ -132,7 +146,134 @@ namespace CTalleres.Talleres
             Console.WriteLine($"El nombre más largo es: {masLargo}");
         }
 
+        /// <summary>
+        /// Ejercicio 11:
+        /// Verifica si todas las palabras en la lista estática "words" tienen más de 3 caracteres.
+        /// </summary>
+        public static void Ej11()
+        {
+            bool todasMasDe3 = words.All(w => w.Length > 3);
+            Console.WriteLine($"¿Todas las palabras tienen más de 3 caracteres?: {todasMasDe3}");
+        }
 
+        /// <summary>
+        /// Ejercicio 12:
+        /// Encuentra y muestra la primera palabra en la lista estática "words" que empieza con la letra 'b'.
+        /// </summary>
+        public static void Ej12()
+        {
+            var primeraB = words.FirstOrDefault(w => w.StartsWith("b"));
+            Console.WriteLine($"Primera palabra que empieza con 'b': {primeraB}");
+        }
+
+        /// <summary>
+        /// Ejercicio 13:
+        /// Cuenta cuántas palabras en la lista estática "words" contienen la letra 'e'.
+        /// </summary>
+        public static void Ej13()
+        {
+            int cantidad = words.Count(w => w.Contains("e"));
+            Console.WriteLine($"Cantidad de palabras que contienen 'e': {cantidad}");
+        }
+
+        /// <summary>
+        /// Ejercicio 14:
+        /// Selecciona todas las palabras en la lista estática "words" y conviértelas a mayúsculas.
+        /// </summary>
+        public static void Ej14()
+        {
+            var mayusculas = words.Select(w => w.ToUpper()).ToList();
+            Console.WriteLine("Palabras en mayúsculas:");
+            Console.WriteLine(string.Join(", ", mayusculas));
+        }
+
+        /// <summary>
+        /// Ejercicio 15:
+        /// Verifica si alguna palabra en la lista estática "words" termina con la letra 'y'.
+        /// </summary>
+        public static void Ej15()
+        {
+            bool algunaTerminaY = words.Any(w => w.EndsWith("y"));
+            Console.WriteLine($"¿Alguna palabra termina con 'y'?: {algunaTerminaY}");
+        }
+        /// <summary>
+        /// Ejercicio 16:
+        /// Combina y ordena de manera ascendente las listas "data" y "moreData".
+        /// </summary>
+        public static void Ej16()
+        {
+            var combinados = data.Concat(moreData).OrderBy(n => n).ToList();
+            Console.WriteLine("Listas combinadas y ordenadas:");
+            Console.WriteLine(string.Join(", ", combinados));
+        }
+
+        /// <summary>
+        /// Ejercicio 17:
+        /// Calcula la suma de todos los números pares en la lista "data".
+        /// </summary>
+        public static void Ej17()
+        {
+            int sumaPares = data.Where(n => n % 2 == 0).Sum();
+            Console.WriteLine($"Suma de números pares en data: {sumaPares}");
+        }
+
+        /// <summary>
+        /// Ejercicio 18:
+        /// Encuentra y muestra el número más grande en la lista "data".
+        /// </summary>
+        public static void Ej18()
+        {
+            int maximo = data.Max();
+            Console.WriteLine($"Número más grande en data: {maximo}");
+        }
+
+        /// <summary>
+        /// Ejercicio 19:
+        /// Une las listas "data" y "moreData", eliminando los elementos duplicados.
+        /// </summary>
+        public static void Ej19()
+        {
+            var union = data.Union(moreData).ToList();
+            Console.WriteLine("Listas unidas sin duplicados:");
+            Console.WriteLine(string.Join(", ", union));
+        }
+
+        /// <summary>
+        /// Ejercicio 20:
+        /// Calcula el promedio de la lista "moreData" y selecciona los números en "data" que son mayores a ese promedio.
+        /// </summary>
+        public static void Ej20()
+        {
+            double promedio = moreData.Average();
+            var mayoresQuePromedio = data.Where(n => n > promedio).ToList();
+
+            Console.WriteLine($"Promedio de moreData: {promedio}");
+            Console.WriteLine("Números en data mayores al promedio:");
+            Console.WriteLine(string.Join(", ", mayoresQuePromedio));
+        }
+
+        /// <summary>
+        /// Ejercicio 21:
+        /// Cuenta cuántos números en la lista "moreData" son primos.
+        /// Usa una función auxiliar para validar si un número es primo.
+        /// </summary>
+        public static void Ej21()
+        {
+            int cantidadPrimos = moreData.Count(n => EsPrimo(n));
+            Console.WriteLine($"Cantidad de números primos en moreData: {cantidadPrimos}");
+        }
+        /// <summary>
+        /// Función auxiliar que determina si un número es primo.
+        /// </summary>
+        private static bool EsPrimo(int numero)
+        {
+            if (numero <= 1) return false;
+            for (int i = 2; i <= Math.Sqrt(numero); i++)
+            {
+                if (numero % i == 0) return false;
+            }
+            return true;
+        }
     }
 
 }
